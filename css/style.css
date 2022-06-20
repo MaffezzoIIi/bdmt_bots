@@ -2,3 +2,16 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.nav-bar {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.logo-catolica {
+  width: 100%;
+}
+
+.img-width {
+  width: 250px;
+  height: 100px;
+}
