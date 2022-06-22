@@ -1,0 +1,31 @@
+.webcam {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background-color: white;
+}
+
+.top-notebook {
+  margin-top: 25px;
+  background-color: lightgray;
+  height: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iframe-video {
+  background-color: gray;
+
+  border-left: 10px solid lightgray;
+  border-right: 10px solid lightgray;
+}
+
+.bottom-notebook {
+  background-color: lightgray;
+  width: 80%;
+  height: 25px;
+}
