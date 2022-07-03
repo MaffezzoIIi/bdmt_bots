@@ -1,13 +1,17 @@
 @import url('notebook.css');
 @import url('progressBar.css');
+@import url('icons.css');
+@import url('tooltip.css');
 
 body {
   margin: 0;
   padding: 0;
+  background-color: #e9e9e9;
 }
 
 .nav-bar {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #008584;
   height: 4rem;
 }
 
@@ -22,4 +26,14 @@ body {
 .img-width {
   width: 20%;
   height: 10vh;
+}
+
+.btn-components {
+  width: 10vh;
+  background-color: #006666;
+  color: white;
+}
+
+.roteiro-font {
+  font-size: 1.4rem;
 }

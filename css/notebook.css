@@ -9,7 +9,7 @@
 
 .top-notebook {
   margin-top: 25px;
-  background-color: lightgray;
+  background-color: #008584;
   height: 15px;
 
   display: flex;
@@ -20,12 +20,12 @@
 .iframe-video {
   background-color: gray;
 
-  border-left: 10px solid lightgray;
-  border-right: 10px solid lightgray;
+  border-left: 10px solid #008584;
+  border-right: 10px solid #008584;
 }
 
 .bottom-notebook {
-  background-color: lightgray;
+  background-color: #008584;
   width: 80%;
   height: 25px;
 }
