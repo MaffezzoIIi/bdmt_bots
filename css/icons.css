@@ -16,15 +16,31 @@
   text-align: center;
 
   position: absolute;
-  bottom: -30px;
+  bottom: -35px;
 
   border-radius: 6px;
   padding: 2px 5px;
 
   background-color: #006666;
   color: white;
+
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 .holder-icon:hover .balao {
   visibility: visible;
+  opacity: 1;
+}
+
+.holder-icon .balao::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #006666 transparent;
 }

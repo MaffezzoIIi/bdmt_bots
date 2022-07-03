@@ -18,11 +18,11 @@
       <div class="container-fluid">
         <h3 class="mr-3" style="margin-right: 20px;">BDMT Boots</h3>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-          aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation" style="">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarScroll">
-          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <div class="collapse navbar-collapse" id="navbarScroll" style="background-color: #008584;">
+          <ul class="navbar-nav navbar-nav-scroll" style="--bs-scroll-height: 100px;">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#group-logo">Logo</a>
             </li>
@@ -270,6 +270,185 @@
         </div>
       </div>
       <!-- Componentes e códigos-->
+      <div class="container" style="background-color: lightblue;">
+        <div class=" container-fluid d-flex mt-5 p-0" id="#circuitos">
+          <h1>Circuitos: </h1>
+        </div>
+        <div class="container" style="background-color: lightpink;">
+          <h4 class="justify-content-center mb-0" id="titulo_semaforo" style="display: none;">Semáforo</h4>
+          <h4 class="justify-content-center mb-0" id="titulo_semaforo" style="display: none;">Luz de emergência</h4>
+          <h4 class="justify-content-center mb-0" id="titulo_semaforo" style="display: flex;">Motor frente traz</h4>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class=" col-1" style="background-color: lightgreen;">
+            Botão
+          </div>
+          <!-- CÓDIGOS E IMAGENS -->
+
+          <!-- SEMAFORO-->
+          <div class="p-0 col-10" style="display: none;" id="semaforo">
+            <div class="container-fluid p-0 d-flex" style="background-color: lightsalmon; align-items: center;">
+              <img src="assets/circuits/circuito_semaforo.png" class="img-fluid" alt="">
+            </div>
+            <div class="container-fluid p-0" style="background-color: lightcoral;">
+              <pre>
+              <code>
+  int vermelho = 13;
+
+  int amarelo = 12;
+  int verde = 11;
+
+  void setup() {
+    pinMode(vermelho, OUTPUT);
+    pinMode(amarelo, OUTPUT);
+    pinMode(verde, OUTPUT);
+  }
+
+  void loop() {
+    digitalWrite(vermelho, HIGH);
+    delay(5000);
+    digitalWrite(vermelho, LOW);
+    digitalWrite(amarelo, HIGH);
+    delay(5000);
+    digitalWrite(amarelo, LOW);
+    digitalWrite(verde, HIGH);
+    delay(5000);
+    digitalWrite(verde, LOW);
+  }
+              </code>
+            </pre>
+            </div>
+          </div>
+          <!-- SEMAFORO-->
+          <!-- LUZ DE EMERGENCIA-->
+          <div class="p-0 col-10" style="display: none;" id="luz_emergencia">
+            <div class="container-fluid p-0 d-flex" style="background-color: lightsalmon; align-items: center;">
+              <img src="assets/circuits/circuito_luz_de_emergencia.png" class="img-fluid" alt="">
+            </div>
+            <div class="container-fluid p-0" style="background-color: lightcoral;">
+              <pre>
+              <code>
+  int ledPin = 7;
+  int ldrPin = 0;
+  int ldrValor = 0;
+  
+  void setup() {
+    pinMode(ledPin, OUTPUT);
+    Serial.begin(9600);
+  }
+  
+  void loop() {
+    ldrValor = analogRead(ldrPin);
+    
+    if(ldrValor >= 100){
+      digitalWrite(ledPin, HIGH);
+    } else {
+      digitalWrite(ledPin, LOW);
+    }
+    
+    Serial.println(ldrValor);
+    delay(100);
+  }
+              </code>
+            </pre>
+            </div>
+          </div>
+          <!-- LUZ DE EMERGENCIA-->
+          <!-- MOTOR FRENTE E TRAS -->
+          <div class="p-0 col-10" style="display: none;" id="motor_frente_traz">
+            <div class="container-fluid p-0 d-flex" style="background-color: lightsalmon; align-items: center;">
+              <img src="assets/circuits/circuito_motor_frente_traz.png" class="img-fluid" alt="">
+            </div>
+            <div class="container-fluid p-0" style="background-color: lightcoral;">
+              <pre>
+              <code>
+  #define a 8
+  #define b 9
+  #define c 10
+  #define t 3500
+  #define v 10
+  
+  void setup(){
+    pinMode(b, OUTPUT);
+    pinMode(a, OUTPUT);
+    pinMode(c, OUTPUT);
+    
+    analogWrite(b,0);
+    digitalWrite(a,LOW);
+    digitalWrite(c,LOW);
+    
+  }
+  
+  void loop() {
+    analogWrite(b,v);
+    digitalWrite(a, HIGH);
+    digitalWrite(c, LOW);
+    delay(t); 
+    
+    analogWrite(b,v);
+    digitalWrite(a, LOW);
+    digitalWrite(c, HIGH);
+    delay(t); 
+    
+  }
+              </code>
+            </pre>
+            </div>
+          </div>
+          <!-- MOTOR FRENTE E TRAS -->
+          <!-- MOTOR CONTROLADO POR LUZ -->
+          <div class="p-0 col-10" style="display: flex;" id="simulador_segue_trilha">
+            <div class="container-fluid p-0 d-flex" style="background-color: lightsalmon; align-items: center;">
+              <img src="assets/circuits/simulador_segue_trilha.png" class="img-fluid" alt="">
+            </div>
+            <div class="container-fluid p-0" style="background-color: lightcoral;">
+              <pre>
+              <code>
+  int motorRightPin = 7;
+  int motorLeftPin = 6;
+  
+  int ldrPin = 0;
+  int ldrValor = 0;
+  
+  void setup() {
+    pinMode(motorRightPin, OUTPUT);
+    pinMode(motorLeftPin, OUTPUT);
+    Serial.begin(9600);
+  }
+  
+  void loop() {
+    ldrValor = analogRead(ldrPin);
+    
+    motores(ldrValor);
+    
+    Serial.println(ldrValor);
+    delay(100);
+  }
+  
+  
+  void motores(int ldrValor){
+    if(ldrValor >= 90){
+      digitalWrite(motorLeftPin, HIGH);
+      digitalWrite(motorRightPin, LOW);
+    } else if(ldrValor <= 80){
+      digitalWrite(motorRightPin, HIGH);
+      digitalWrite(motorLeftPin, LOW);
+    } else {
+      digitalWrite(motorRightPin, HIGH);
+      digitalWrite(motorLeftPin, HIGH);
+    }
+  }
+              </code>
+            </pre>
+            </div>
+          </div>
+          <!-- MOTOR CONTROLADO POR LUZ -->
+          <!-- CÓDIGOS E IMAGENS -->
+          <div class="col-1" style="background-color: lightseagreen;">
+            BOTAO
+          </div>
+        </div>
+      </div>
       <!-- Componentes e códigos -->
     </div>
     <!-- Footer -->
