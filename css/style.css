@@ -37,3 +37,9 @@ body {
 .roteiro-font {
   font-size: 1.4rem;
 }
+
+.nome-aluno {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
