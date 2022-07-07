@@ -4,8 +4,9 @@
     width: var(--scrollAmount);
     height: 4px;
 
-    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-
+    /* background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); */
+    background-image: linear-gradient(to top, #88d3ce 0%, #6e45e2 100%);
+    
     position: fixed;
     z-index: 99;
 }

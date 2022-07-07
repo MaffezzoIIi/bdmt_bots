@@ -22,27 +22,27 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll" style="background-color: #008584;">
-          <ul class="navbar-nav navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <ul class="navbar-nav navbar-nav-scroll teste" style="--bs-scroll-height: 100px;">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#group-logo">Logo</a>
+              <a class="nav-link nav-bar-itens" aria-current="page" href="#group-logo">Logo</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#apresentacao">Apresentação</a>
+              <a class="nav-link nav-bar-itens " aria-current="page" href="#apresentacao">Apresentação</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#roteiro">Roteiro</a>
+              <a class="nav-link nav-bar-itens" aria-current="page" href="#roteiro">Roteiro</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#ferramentas">Ferramentas</a>
+              <a class="nav-link nav-bar-itens" aria-current="page" href="#ferramentas">Ferramentas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#componentes">Componentes</a>
+              <a class="nav-link nav-bar-itens" aria-current="page" href="#componentes">Componentes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#circuitos">Circuitos</a>
+              <a class="nav-link nav-bar-itens" aria-current="page" href="#circuitos">Circuitos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#footer">Integrantes</a>
+              <a class="nav-link nav-bar-itens" aria-current="page" href="#footer">Integrantes</a>
             </li>
           </ul>
         </div>
@@ -465,12 +465,85 @@
         </div>
       </div>
       <!-- Componentes e códigos -->
+      <div class="container">
+        <div class=" container-fluid d-flex mt-5 p-0" id="circuitos">
+          <h1>Código final: </h1>
+        </div>
+        <div class="container-fluid d-flex justify-content-between g-3 row mb-5">
+          <div class="col-7">
+            <img src="assets/img/definicao_das_variaveis.png" class="img-fluid img-cod" alt="">
+          </div>
+          <div class="col-5 p-3 d-flex justify-content-center align-items-center holder-text-cod">
+            <p class="roteiro-font text-cod">
+              Definição das variáveis constantes para o sistema, atribuição das portas para as variaveis PIN para o LED,
+              o motor e sensores
+            </p>
+          </div>
+        </div>
+        <div class="container-fluid d-flex justify-content-between g-3 row mb-5">
+          <div class="col-7 d-flex">
+            <img src="assets/img/funcao_de_setup.png" class="img-fluid img-cod" alt="">
+          </div>
+          <div class="col-5 p-3 d-flex justify-content-center align-items-center holder-text-cod">
+            <p class="roteiro-font text-cod">
+              Função responsável por definir as configurações do led
+            </p>
+          </div>
+        </div>
+        <div class="container-fluid d-flex justify-content-between g-3 row mb-5">
+          <div class="col-7 d-flex">
+            <img src="assets/img/funcao_loop.png" class="img-fluid img-cod" alt="">
+          </div>
+          <div class="col-5 p-3 d-flex justify-content-center align-items-center holder-text-cod">
+            <p class="roteiro-font text-cod">
+              Função responsável por dar inicio ao sistema
+            </p>
+          </div>
+        </div>
+        <div class="container-fluid d-flex justify-content-between g-3 row mb-5">
+          <div class="col-8 d-flex">
+            <img src="assets/img/funcao_de_funcionamento.png" class="img-fluid img-cod" alt="">
+          </div>
+          <div class="col-4 p-3 d-flex justify-content-center align-items-center holder-text-cod">
+            <p class="roteiro-font text-cod">
+              A função <code>followLineMEF()</code> é a responsável por fazer as verificações do nosso motor, primeiro
+              temos um loop dentro dela onde irá indicar o estado dela e as verificações, são leituras dos sensores
+              comparado com <code>TRESHHOLD</code>
+              que é o indicador da linha branca ou a linha que ele terá que seguir, e também dentro dela é onde ocorre o
+              calculo de erro baseado no PID, caso ela caia em alguma validação ela chama a funcao
+              <code>motorOption()</code>
+            </p>
+          </div>
+        </div>
+        <div class="container-fluid d-flex justify-content-between g-3 row mb-5">
+          <div class="col-6 d-flex">
+            <img src="assets/img/funcao_opcao_motor.png" class="img-fluid img-cod" alt="">
+          </div>
+          <div class="col-6 p-3 d-flex justify-content-center align-items-center holder-text-cod">
+            <p class="roteiro-font text-cod">
+              A <code>motorOption()</code> recebe como parâmetros a opção escolhida, a velocidade do motor esquerdo e do
+              direito e passa para a função <code>motorControl()</code>
+            </p>
+          </div>
+        </div>
+        <div class="container-fluid d-flex justify-content-between g-3 row mb-5">
+          <div class="col-6 d-flex">
+            <img src="assets/img/funcao_motor_control.png" class="img-fluid img-cod" alt="">
+          </div>
+          <div class="col-6 p-3 d-flex justify-content-center align-items-center holder-text-cod">
+            <p class="roteiro-font text-cod">
+              Na <code>motorControl()</code> realizamos o controle dos motores definimos os pinos e qual será a função,
+              que no caso <code>OUTPUT</code> é saída e assim definimos qual motor deve ligar e qual deve desligar e qual deve ser a sua velocidade
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Footer -->
     <footer class="text-center text-lg-start" id="footer">
       <div class="container p-4">
         <div class="row">
-          <div>
+          <div class="mb-4">
             <h1>Integrantes:</h1>
           </div>
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
